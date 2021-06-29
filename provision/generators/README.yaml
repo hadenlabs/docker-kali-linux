@@ -27,6 +27,12 @@ badges:
   - name: Lint
     image: https://img.shields.io/github/workflow/status/hadenlabs/docker-kali-linux/lint-code
     url: https://github.com/hadenlabs/docker-kali-linux/actions?workflow=lint-code
+  - name: CI
+    image: https://img.shields.io/github/workflow/status/hadenlabs/docker-kali-linux/ci
+    url: https://github.com/hadenlabs/docker-kali-linux/actions?workflow=ci
+  - name: Test
+    image: https://img.shields.io/github/workflow/status/hadenlabs/docker-kali-linux/test
+    url: https://github.com/hadenlabs/docker-kali-linux/actions?workflow=test
   - name: Conventional Commits
     image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
     url: https://conventionalcommits.org
