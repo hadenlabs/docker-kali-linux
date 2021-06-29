@@ -61,7 +61,14 @@ repos:
             .+\.tpl.sh$|
           )$
         args:
-          - --exclude=SC1072,SC1073,SC2068
+          - --exclude=SC1071,SC1073,SC2068
+      - id: validate-toml
+      - id: no-go-testing
+      - id: golangci-lint
+        args:
+          - --fix
+          - --config=.github/linters/.golangci.yml
+
       - id: todocheck
       - id: gitleaks
         args:
@@ -69,3 +76,26 @@ repos:
           - --repo-config-path=.github/linters/.gitleaks.toml
           - --verbose
 
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        language: system
+        entry: ./node_modules/prettier/bin-prettier.js
+        args:
+          - '--write=true'
+          - '--config=.github/linters/prettier.config.js'
+          - '--ignore-path=.github/linters/.prettierignore'
+        files: \.(js|jsx|json|ts|tsx|mjs|d.ts|md|yml|yaml|gql|graphql|mjml)$
+        exclude: node_modules
+      - id: eslint
+        name: eslint
+        language: node
+        entry: node_modules/eslint/bin/eslint.js
+        args:
+          - '--fix'
+          - '--color'
+          - '--config=.github/linters/.eslintrc.js'
+          - '--ignore-path=.github/linters/.eslintignore'
+        files: \.(js|jsx|ts|tsx|mjs|d.ts)$
+        exclude: node_modules
