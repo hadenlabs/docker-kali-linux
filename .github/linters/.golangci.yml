@@ -12,10 +12,6 @@ linters-settings:
     # report about shadowed variables
     check-shadowing: true
 
-  golint:
-    # minimal confidence for issues, default is 0.8
-    min-confidence: 0.8
-
   gofmt:
     # simplify code: gofmt with `-s` option, true by default
     simplify: true
@@ -100,7 +96,6 @@ linters:
     - goimports
     - gofmt # We enable this as well as goimports for its simplify mode.
     - prealloc
-    - golint
     - unconvert
     - misspell
     - nakedret
@@ -133,10 +128,6 @@ issues:
         - gosec
         - scopelint
         - unparam
-
-    # - text: "should have a package comment"
-    #   linters:
-    #     - golint
 
   # Independently from option `exclude` we use default exclude patterns,
   # it can be disabled by this option. To list all
