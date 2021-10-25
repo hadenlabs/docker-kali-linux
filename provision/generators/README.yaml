@@ -21,18 +21,15 @@ github_repo: hadenlabs/docker-kali-linux
 
 # Badges to display
 badges:
-  - name: GitHub release
-    image: https://img.shields.io/github/release/hadenlabs/docker-kali-linux?style=flat-square
-    url: https://github.com/hadenlabs/docker-kali-linux/releases/latest
+  - name: Latest Release
+    image: https://img.shields.io/github/release/hadenlabs/docker-kali-linux
+    url: https://github.com/hadenlabs/docker-kali-linux/releases
   - name: Lint
     image: https://img.shields.io/github/workflow/status/hadenlabs/docker-kali-linux/lint-code
     url: https://github.com/hadenlabs/docker-kali-linux/actions?workflow=lint-code
-  - name: CI
-    image: https://img.shields.io/github/workflow/status/hadenlabs/docker-kali-linux/ci
-    url: https://github.com/hadenlabs/docker-kali-linux/actions?workflow=ci
-  - name: Test
-    image: https://img.shields.io/github/workflow/status/hadenlabs/docker-kali-linux/test
-    url: https://github.com/hadenlabs/docker-kali-linux/actions?workflow=test
+  - name: pre-commit
+    image: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+    url: https://github.com/pre-commit/pre-commit
   - name: Conventional Commits
     image: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow
     url: https://conventionalcommits.org
