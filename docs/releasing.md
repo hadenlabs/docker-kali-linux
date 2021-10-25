@@ -1,3 +1,13 @@
+<!-- Space: DockerKaliLinux -->
+<!-- Parent: Project -->
+<!-- Title: Releasing -->
+
+<!-- Label: DockerKaliLinux -->
+<!-- Label: Project -->
+<!-- Label: Releasing -->
+<!-- Include: docs/disclaimer.md -->
+<!-- Include: ac:toc -->
+
 # Releasing
 
 ## Bump a new version
