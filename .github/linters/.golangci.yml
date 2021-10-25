@@ -112,6 +112,7 @@ linters:
     - testpackage
     - goerr113
     - scopelint
+    - golint
 
     # Drives todos nuts
     - godox
@@ -128,6 +129,11 @@ issues:
         - gosec
         - scopelint
         - unparam
+        - golint
+
+    # - text: "should have a package comment"
+    #   linters:
+    #     - golint
 
   # Independently from option `exclude` we use default exclude patterns,
   # it can be disabled by this option. To list all
