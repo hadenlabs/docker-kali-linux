@@ -1,7 +1,3 @@
-<!-- Space: DockerKaliLinux -->
-<!-- Parent: Project -->
-<!-- Title: Authors -->
-
 # Authors
 
 ## Leads
