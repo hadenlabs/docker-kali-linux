@@ -1,6 +1,6 @@
 <!-- Space: DockerKaliLinux -->
 <!-- Parent: Project -->
-<!-- Title: Contributing -->
+<!-- Title: Project Contributing -->
 
 <!-- Label: DockerKaliLinux -->
 <!-- Label: Project -->
