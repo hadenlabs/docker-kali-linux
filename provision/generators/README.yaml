@@ -40,3 +40,9 @@ badges:
 description: |-
 
   docker-kali-linux for project
+
+# How to use this project
+usage: |-
+  ```bash
+  task setup
+  ```
