@@ -5,6 +5,7 @@ includes:
   python: ./provision/task/python.yml
   git: ./provision/task/git.yml
   go: ./provision/task/go.yml
+  yarn: ./provision/task/yarn.yml
   docs: ./provision/task/docs.yml
   docker: ./provision/task/docker.yml
   plantuml: ./provision/task/plantuml.yml
@@ -112,6 +113,7 @@ tasks:
       - task: python:precommit
       - task: git:setup
       - task: go:setup
+      - task: yarn:setup
       - task: gitflow:setup
 
   environment:
