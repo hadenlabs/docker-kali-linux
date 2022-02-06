@@ -2,19 +2,20 @@ version: '3'
 
 includes:
   changelog: ./provision/task/changelog.yml
-  python: ./provision/task/python.yml
-  git: ./provision/task/git.yml
-  go: ./provision/task/go.yml
-  yarn: ./provision/task/yarn.yml
-  docs: ./provision/task/docs.yml
-  docker: ./provision/task/docker.yml
-  plantuml: ./provision/task/plantuml.yml
-  gitflow: ./provision/task/gitflow.yml
-  version: ./provision/task/version.yml
-  mark: ./provision/task/mark.yml
-  prettier: ./provision/task/prettier.yml
-  sonar: ./provision/task/sonar.yml
+  confluence: ./provision/task/confluence.yml
   diagrams: ./provision/diagrams/Taskfile.yml
+  docker: ./provision/task/docker.yml
+  docs: ./provision/task/docs.yml
+  git: ./provision/task/git.yml
+  gitflow: ./provision/task/gitflow.yml
+  go: ./provision/task/go.yml
+  mark: ./provision/task/mark.yml
+  plantuml: ./provision/task/plantuml.yml
+  prettier: ./provision/task/prettier.yml
+  python: ./provision/task/python.yml
+  sonar: ./provision/task/sonar.yml
+  version: ./provision/task/version.yml
+  yarn: ./provision/task/yarn.yml
   images:
     taskfile: ./images/Taskfile.yml
     dir: ./images
@@ -41,8 +42,8 @@ vars:
   PROJECT_NAME: docker-kali-linux
   ORGANIZATION: hadenlabs
   DOCKER_ORGANIZATION: hadenlabs
-  DOCKER_PLATFORMS: linux/amd64,linux/arm/v7,linux/arm64/v8
-  DOCKER_IMAGE_NAME: python
+  DOCKER_PLATFORMS: linux/amd64,linux/arm64
+  DOCKER_IMAGE_NAME: kali-linux-full
   REVIEWERS: luismayta
   PYTHON_VERSION: 3.9.2
   NODE_VERSION: 16.6.1
@@ -109,6 +110,8 @@ tasks:
   setup:
     desc: Setup dependences of project
     cmds:
+      - >-
+        [ -e ".env" ] || cp -rf .env.example .env
       - task: python:setup
       - task: python:precommit
       - task: git:setup
@@ -120,6 +123,10 @@ tasks:
     desc: Setup environment of project
     cmds:
       - task: python:environment
+  test:
+    desc: test all
+    cmds:
+      - task: go:test
 
   build:docker:
     run: once
