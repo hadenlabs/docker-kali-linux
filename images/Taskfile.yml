@@ -1,0 +1,29 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  build:
+    desc: Build Image Without buildx.
+    run: once
+    cmds:
+      - >-
+        docker build
+        --platform={{.DOCKER_PLATFORMS}}
+        --file core/Dockerfile
+        --tag {{.DOCKER_ORGANIZATION}}/{{.DOCKER_IMAGE_NAME}}:{{.APP_TAG}} .
+        --build-arg VERSION={{.APP_TAG}}
+    vars:
+      DOCKER_PLATFORMS: linux/amd64
+
+  publish:
+    desc: Publish Image with buildx .
+    run: once
+    cmds:
+      - >-
+        docker buildx build
+        --platform={{.DOCKER_PLATFORMS}}
+        --file core/Dockerfile
+        --tag {{.DOCKER_ORGANIZATION}}/{{.DOCKER_IMAGE_NAME}}:{{.APP_TAG}} .
+        --build-arg VERSION={{.APP_TAG}}
+        --push
