@@ -42,7 +42,7 @@ vars:
   PROJECT_NAME: docker-kali-linux
   ORGANIZATION: hadenlabs
   DOCKER_ORGANIZATION: hadenlabs
-  DOCKER_PLATFORMS: linux/amd64,linux/arm64
+  DOCKER_PLATFORMS: linux/amd64,linux/arm64,linux/arm/v7
   DOCKER_IMAGE_NAME: kali-linux-full
   REVIEWERS: luismayta
   PYTHON_VERSION: 3.9.2
@@ -87,7 +87,6 @@ tasks:
       - git:check
       - gitflow:check
       - docs:check
-      - sonar:check
       - go:check
 
   readme:
