@@ -1,6 +1,6 @@
 FROM kalilinux/kali-rolling:arm64
 
-ARG VERSION=0.1.0
+ARG VERSION=0.0.0
 ARG KALI_METAPACKAGE=core
 
 LABEL maintainer="Team Hadenlabs <support@hadenlabs.com>" \
