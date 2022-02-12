@@ -3,7 +3,8 @@ name: cd
 
 on:
   workflow_run:
-    workflows: ['test']
+    workflows:
+      - create-release
     types:
       - completed
 

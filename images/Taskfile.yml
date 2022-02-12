@@ -8,10 +8,10 @@ tasks:
     run: once
     cmds:
       - >-
-        docker build
+        docker build .
         --platform={{.DOCKER_PLATFORMS}}
         --file core/Dockerfile
-        --tag {{.DOCKER_ORGANIZATION}}/{{.DOCKER_IMAGE_NAME}}:{{.APP_TAG}} .
+        --tag {{.DOCKER_ORGANIZATION}}/{{.DOCKER_IMAGE_NAME}}:{{.APP_TAG}}
         --build-arg VERSION={{.APP_TAG}}
     vars:
       DOCKER_PLATFORMS: linux/amd64
@@ -21,9 +21,10 @@ tasks:
     run: once
     cmds:
       - >-
-        docker buildx build
+        docker buildx build .
         --platform={{.DOCKER_PLATFORMS}}
         --file core/Dockerfile
-        --tag {{.DOCKER_ORGANIZATION}}/{{.DOCKER_IMAGE_NAME}}:{{.APP_TAG}} .
+        --tag {{.DOCKER_ORGANIZATION}}/{{.DOCKER_IMAGE_NAME}}:{{.APP_TAG}}
+        --tag {{.DOCKER_ORGANIZATION}}/{{.DOCKER_IMAGE_NAME}}:latest
         --build-arg VERSION={{.APP_TAG}}
         --push
