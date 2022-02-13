@@ -17,15 +17,10 @@ type Config struct {
 	App    App
 }
 
-// Configurer methods for config.
-type Configurer interface {
-	ReadConfig() (*Config, error)
-}
-
 // ReadConfig read values and files for config.
 func (c *Config) ReadConfig() (*Config, error) {
 	_, filePath, _, _ := runtime.Caller(0)
-	rootDir := filepath.Join(filepath.Dir(filePath))
+	rootDir := filepath.Dir(filePath)
 	c.App.RootPath = filepath.Join(rootDir, "..")
 	tag := version.Short()
 	c.Docker.TargetImage = targetImage
