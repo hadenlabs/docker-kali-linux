@@ -1,6 +1,6 @@
 FROM kalilinux/kali-rolling:arm64
 
-ARG VERSION=0.0.0
+ARG VERSION=core
 
 LABEL maintainer="Team Hadenlabs <support@hadenlabs.com>" \
       org.label-schema.vcs-url="https://github.com/hadenlabs/docker-kali-linux" \
@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ENV BASE_DEPS \
     bash \
-    kali-linux-large \
+    kali-linux-core \
     pciutils \
     bash-completion
 
