@@ -12,6 +12,7 @@ import (
 )
 
 func TestToolsBuilderSuccess(t *testing.T) {
+	t.Parallel()
 	conf := config.Initialize()
 	imageTag := fmt.Sprintf("%s:%s", conf.Docker.TargetImage, "latest")
 	otherOptions := []string{}
