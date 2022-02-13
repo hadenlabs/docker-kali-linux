@@ -1,13 +1,3 @@
-<!-- Space: DockerKaliLinux -->
-<!-- Parent: Project -->
-<!-- Title: Project Troubleshooting -->
-
-<!-- Label: DockerKaliLinux -->
-<!-- Label: Project -->
-<!-- Label: Troubleshooting -->
-<!-- Include: docs/disclaimer.md -->
-<!-- Include: ac:toc -->
-
 # Troubleshooting
 
 ## Environment
