@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. This file uses change log convention from [keep a CHANGELOG](http://keepachangelog.com/en/0.3.0/).
 
+<a name="0.2.0"></a>
+
+## [0.2.0](https://github.com/hadenlabs/docker-kali-linux/compare/0.1.1...0.2.0)
+
+> 2022-02-13
+
+### Code Refactoring
+
+- multistage generation docker ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+- configuration projects ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+- separated interface configuration ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+- change packages kali linux large to core ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+
+### Features
+
+- implement kali packages ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+- implement make image main ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+
+### Performance Improvements
+
+- implement parallel run test ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+- upgrade pre-commit run gitleaks ([#13](https://github.com/hadenlabs/docker-kali-linux/issues/13))
+
 <a name="0.1.1"></a>
 
 ## [0.1.1](https://github.com/hadenlabs/docker-kali-linux/compare/0.1.0...0.1.1)
