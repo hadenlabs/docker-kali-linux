@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. This file uses change log convention from [keep a CHANGELOG](http://keepachangelog.com/en/0.3.0/).
 
+<a name="0.1.1"></a>
+
+## [0.1.1](https://github.com/hadenlabs/docker-kali-linux/compare/0.1.0...0.1.1)
+
+> 2022-02-12
+
+### Bug Fixes
+
+- load vars environment publish docker hub ([#11](https://github.com/hadenlabs/docker-kali-linux/issues/11))
+- configuration sonar environment ([#10](https://github.com/hadenlabs/docker-kali-linux/issues/10))
+
 <a name="0.1.0"></a>
 
 ## 0.1.0
