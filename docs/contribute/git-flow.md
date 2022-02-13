@@ -17,7 +17,7 @@ To contribute to docker-kali-linux project on [GitHub](https://github.com/hadenl
 
 To follow the instructions in this guide and start contributing to docker-kali-linux project on Gitlab:
 
-1.  **Fork** the repo on GitLab
+1.  **Fork** the repo on GitHub
 2.  **Clone** the project to your own machine
 
 To synchronize with the main repository, add it to the remotes:
