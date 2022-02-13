@@ -13,14 +13,14 @@ import (
 
 func TestToolsBuilderSuccess(t *testing.T) {
 	conf := config.Initialize()
-	imageTag := fmt.Sprintf("%s:%s", conf.Docker.TargetImage, "base")
+	imageTag := fmt.Sprintf("%s:%s", conf.Docker.TargetImage, "latest")
 	otherOptions := []string{}
 	buildOptions := &docker.BuildOptions{
 		Tags:         []string{imageTag},
 		OtherOptions: otherOptions,
 	}
 
-	docker.Build(t, "../../images/base", buildOptions)
+	docker.Build(t, conf.App.RootPath, buildOptions)
 	opts := &docker.RunOptions{
 		Command: []string{
 			"bash", "-c",
@@ -34,14 +34,14 @@ func TestToolsBuilderSuccess(t *testing.T) {
 
 func TestGetDockerBuilderSuccess(t *testing.T) {
 	conf := config.Initialize()
-	imageTag := fmt.Sprintf("%s:%s", conf.Docker.TargetImage, "base")
+	imageTag := fmt.Sprintf("%s:%s", conf.Docker.TargetImage, "latest")
 	otherOptions := []string{}
 	buildOptions := &docker.BuildOptions{
 		Tags:         []string{imageTag},
 		OtherOptions: otherOptions,
 	}
 
-	docker.Build(t, "../../images/base", buildOptions)
+	docker.Build(t, conf.App.RootPath, buildOptions)
 	opts := &docker.RunOptions{
 		Command: []string{
 			"bash", "-c",

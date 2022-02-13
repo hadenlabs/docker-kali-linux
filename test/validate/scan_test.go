@@ -14,7 +14,7 @@ import (
 
 func TestToolsValidateScanSuccess(t *testing.T) {
 	conf := config.Initialize()
-	imageTag := fmt.Sprintf("%s:%s", conf.Docker.TargetImage, "base")
+	imageTag := fmt.Sprintf("%s:%s", conf.Docker.TargetImage, "latest")
 	otherOptions := []string{}
 	expectApps := []string{
 		"amap",
@@ -50,7 +50,7 @@ func TestToolsValidateScanSuccess(t *testing.T) {
 		OtherOptions: otherOptions,
 	}
 
-	docker.Build(t, "../../images/base", buildOptions)
+	docker.Build(t, conf.App.RootPath, buildOptions)
 	opts := &docker.RunOptions{
 		Command: []string{
 			"bash", "-c",
