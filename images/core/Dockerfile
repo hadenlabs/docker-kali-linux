@@ -12,7 +12,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ENV BASE_DEPS \
     bash \
-    kali-linux-core \
     pciutils \
     bash-completion
 
@@ -21,10 +20,19 @@ ENV BUILD_DEPS \
     curl \
     openssl
 
+ENV KALI_PACKAGES \
+    kali-linux-core \
+    kali-linux-default
+
+ENV KALI_TOOLS \
+    amap
+
 RUN apt-get -y update \
     && apt-get install -y --no-install-recommends \
     ${BASE_DEPS} \
     ${BUILD_DEPS} \
+    ${KALI_PACKAGES} \
+    ${KALI_TOOLS} \
     && apt-get clean \
     && apt-get purge -y \
     && apt-get autoremove -y \
