@@ -131,12 +131,10 @@ tasks:
     run: once
     desc: Build docker Image.
     cmds:
-      - task: images:build
+      - task: docker:build
 
   push:docker:
     run: once
     desc: Push docker Image.
-    deps:
-      - docker:login
     cmds:
-      - task: images:publish
+      - task: docker:publish
